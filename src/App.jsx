@@ -29,15 +29,18 @@ export default function App() {
     <div className="container">
       <h1>💸 Currency Converter 💸</h1>
       <div className="currency">
-        <input
-          type="text"
-          value={amount}
-          onChange={(e) => {
-            setAmount(e.target.value);
-            setSelectSize(0);
-          }}
-          disabled={!amount && amount !== "" && isLoading}
-        ></input>
+        <div className="input-container">
+          <input
+            type="text"
+            value={amount}
+            onChange={(e) => {
+              setAmount(e.target.value);
+              setSelectSize(0);
+            }}
+            disabled={!amount && amount !== "" && isLoading}
+          ></input>
+        </div>
+
         <select
           value={fromCur}
           onChange={(e) => {
